@@ -1,0 +1,77 @@
+{
+  "id": "computational-thinking-and-problem-solving-ct-ps",
+  "name": "Computational Thinking & Problem Solving",
+  "year": "first-year",
+  "icon": "binary",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1cMHvjFfeM4qjgPYC-vWdO4Zx0furs9y6",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1cep_XaC1SbUHnKTGz4njltMEKqa5daKZ",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1PsVFKeiCao1nL4jbuImQbxfzgj_-wfIP/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1NxNm7N2ARJdFpwF1PBiPNQXbuj1CG6oD",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1PkoNrl-_XAtqLOF4K0x6PvBQPBQyUYEc/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": [
+    {
+      "label": "PYQ",
+      "type": "question-bank",
+      "url": "https://drive.google.com/drive/folders/1nABElFX_-Z9Vkp76FLuU1XagG_5xECTl",
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

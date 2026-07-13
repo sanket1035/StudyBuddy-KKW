@@ -1,0 +1,42 @@
+{
+  "id": "advanced-data-structure",
+  "name": "Advanced data structure",
+  "year": "second-year",
+  "icon": "book-open",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": []
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": []
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": []
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": []
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": []
+    }
+  ],
+  "bonus": [
+    {
+      "label": "All Units Folder",
+      "type": "folder",
+      "url": "https://drive.google.com/drive/folders/1R1N0vh-JhwZiwuhsqMkB2xUqYFuezQpt?usp=sharing",
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

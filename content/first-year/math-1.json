@@ -1,0 +1,76 @@
+{
+  "id": "math-1",
+  "name": "Math 1",
+  "year": "first-year",
+  "icon": "calculator",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11iiEht00gy8FL4RU6eNSBA-UwH0KAjOt/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/12F94rKoGqTzJ6i2P0V7cYUp1xy9z3Bxt/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/12I32Fd45Zuz5TpA2OYepYiPyak7dP2Vb/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/12PdbFskGlKapBwIs0aPXVNCWV_tfMqUs/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11uHx3N_Yz_BpBGSI37PEZZyzo3uTN7mG/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11qS2qAmZApWSBTU6GRSBB6M34py1OnvQ/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": []
+}

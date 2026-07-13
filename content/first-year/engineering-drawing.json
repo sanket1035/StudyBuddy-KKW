@@ -1,0 +1,70 @@
+{
+  "id": "engineering-drawing",
+  "name": "Engineering Drawing",
+  "year": "first-year",
+  "icon": "compass",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11dGG6HlorS8frsHlyt5k1H5plkx3DRwq/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11dycT8H_qNSG12i9HUh4mzALcHBi7I8g/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11h3Mya7ZnMjg1HNvwa79DmJUBZGFi8KV/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/11ecfHV9Gfly8F1S_VEKZGrUiFtaJjn8P/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1LGPLuSoCBE9deUqBdUzGF-I6XhbVXYMT",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": []
+}

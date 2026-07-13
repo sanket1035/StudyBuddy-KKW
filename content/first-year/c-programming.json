@@ -1,0 +1,83 @@
+{
+  "id": "c-programming",
+  "name": "C Programming",
+  "year": "first-year",
+  "icon": "code",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1GMGngcUXZrDfg5uYj7HrFdDVcXRwQAil",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "Question bank for & 2",
+          "type": "question-bank",
+          "url": "https://drive.google.com/file/d/11E-R_3BNPE6btYCMTdPyiJtjwSEuWHax/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1GhEkv493Nf-8dbFP3YyiCU88b_IYyCbV",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1GnQ97u-cqHWjK5u2BshIj5qCh7jnusRy",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1Gwtqbu-3Y0f9vdNjW-1vDhEm4wgdBZKw",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1H1UNMPWD3utSYQ0X5A4FGXMdOUpKA0cA",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": [
+    {
+      "label": "Other",
+      "type": "file",
+      "url": "https://drive.google.com/drive/folders/1HmoU5VMPeOMFqj9X_Y_CtEqrnrA5HJ9P",
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

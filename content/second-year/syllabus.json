@@ -1,0 +1,28 @@
+{
+  "id": "syllabus",
+  "name": "Syllabus & Curriculum",
+  "year": "second-year",
+  "icon": "file-text",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Curriculum Documents",
+      "resources": [
+        {
+          "label": "Entire AI&DS syllabus",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1VwJ0yRWFEy32IQnkJlRqpAUD_0NebMcD/view?usp=drive_link",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "Entire Computer science syllabus",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1kwPqBuEIpx9VdsPSaEdx7iZ4pKxkRlcH/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": []
+}

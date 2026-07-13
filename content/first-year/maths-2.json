@@ -1,0 +1,107 @@
+{
+  "id": "maths-2",
+  "name": "Maths 2",
+  "year": "first-year",
+  "icon": "calculator",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/14KttXJqQnsNAgeBI-32ujIEvvRN6AMYi/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "handwritten notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/14K9K2iK0OzIEdc8c0V7D6zwKtAdvMMvK/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/14U9uMm6cq4vYu_9Qwmir5SwXA5ui8URk/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "handwritten notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/14bE_PPtBElVOchelTjXeAninGw7YPUv7/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "handwritten notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/14dpOHjSNiagKAzGY3lLHFvh-SDE32d59/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "handwritten notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/14hJq1V_kjbAZ5cSY9N1jdf_nMw8rUdcF/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "handwritten notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1M7zQC2lhKzorqefpVxOxO3ZmT2BP83Pf/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "practice Q&A",
+          "type": "question-bank",
+          "url": "https://drive.google.com/file/d/1LzUmLmCNiGiuOItW5WIPO8BfamJit7Rj/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": [
+    {
+      "label": "Unit 1 Lecture Playlist",
+      "type": "video",
+      "url": "https://youtube.com/playlist?list=PLKS7ZMKnbPrQukeSraYiel-cNtwscFtlQ",
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "label": "Unit 2 Lecture Playlist",
+      "type": "video",
+      "url": "https://youtube.com/playlist?list=PLT3bOBUU3L9juyFTI3lpeXXhIetVB00cr",
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "label": "Unit 5 Lecture Playlist",
+      "type": "video",
+      "url": "https://youtube.com/playlist?list=PLKS7ZMKnbPrRB35X15lNvqpOwWW1NLcmL",
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

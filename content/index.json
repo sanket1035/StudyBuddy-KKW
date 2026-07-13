@@ -1,0 +1,139 @@
+{
+  "first-year": [
+    {
+      "id": "math-1",
+      "name": "Math 1",
+      "icon": "calculator",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "maths-2",
+      "name": "Maths 2",
+      "icon": "calculator",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "applied-chemistry",
+      "name": "Applied Chemistry",
+      "icon": "flask-conical",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "applied-physics",
+      "name": "Applied Physics",
+      "icon": "atom",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "fundamental-of-electronics",
+      "name": "Fundamental Of Electronics",
+      "icon": "cpu",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "fundamentals-of-electrical-engineering",
+      "name": "Fundamentals Of Electrical Engineering",
+      "icon": "zap",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "engineering-drawing",
+      "name": "Engineering Drawing",
+      "icon": "compass",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "c-programming",
+      "name": "C Programming",
+      "icon": "code",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "computational-thinking-and-problem-solving-ct-ps",
+      "name": "Computational Thinking & Problem Solving",
+      "icon": "binary",
+      "unitCount": 5,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "other",
+      "name": "PYQs & Others",
+      "icon": "help-circle",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    }
+  ],
+  "second-year": [
+    {
+      "id": "discrete-structures",
+      "name": "Discrete structure (mathematics)",
+      "icon": "network",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "data-structure",
+      "name": "Data structure",
+      "icon": "book-open",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "deld",
+      "name": "DELD(Digital electronics &logic design)",
+      "icon": "layers",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "operating-systems",
+      "name": "Operating system",
+      "icon": "server",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "maths-3",
+      "name": "Maths 3",
+      "icon": "calculator",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "dbms",
+      "name": "Database management system [DBMS]",
+      "icon": "database",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "advanced-data-structure",
+      "name": "Advanced data structure",
+      "icon": "book-open",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "software-engineering",
+      "name": "Software engineering",
+      "icon": "settings",
+      "unitCount": 0,
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "id": "syllabus",
+      "name": "Syllabus & Curriculum",
+      "icon": "file-text",
+      "unitCount": 1,
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

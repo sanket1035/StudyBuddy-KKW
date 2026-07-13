@@ -1,0 +1,83 @@
+{
+  "id": "fundamental-of-electronics",
+  "name": "Fundamental Of Electronics",
+  "year": "first-year",
+  "icon": "cpu",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/10LzpyEdoRP1dwrEYc76edbqJNOrdnfpm/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/10M7j9XB6szFivn_r0ha8Bh7KXbBsuTXM/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/10SeYV_USpHvQRhaapYrlnGFymM9cqsco/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/10TtUQngr77Uli54YK80X3wOqcmukpv8I/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/10Y1K-Cubpq5-MXdhkR1653bQQ2P-0cEr/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": [
+    {
+      "label": "Question bank",
+      "type": "question-bank",
+      "url": "https://drive.google.com/file/d/10Ya2psxtk9L7JJCL-1xrsbyMbBR5sVum/view?usp=drivesdk",
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "label": "Video link for study",
+      "type": "video",
+      "url": "https://drive.google.com/file/d/110KAwvp4asARu7fOa7O4hbfUcL59r-A4/view?usp=drivesdk",
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

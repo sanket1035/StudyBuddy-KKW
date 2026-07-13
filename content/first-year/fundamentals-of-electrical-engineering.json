@@ -1,0 +1,95 @@
+{
+  "id": "fundamentals-of-electrical-engineering",
+  "name": "Fundamentals Of Electrical Engineering",
+  "year": "first-year",
+  "icon": "zap",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1Tm3G9_so4_EdvuCzPUkK3889BCJzD7P-",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/drive/folders/1EcvprkM0xqU0iKXhqcWZgJC8ymHfPFYU",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1MpVbv5axKK7zvLQHhQWJqwjgpWqcsEdI/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1JaJCKcA5CWypompYAJ7EQyz4q0JV7zcD/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "numerical",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1JsUPIydXJT7LmeCrQ_pc5x9Ti29nb0Qi/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1J_IRlyBeEYefzxcAsBm8cOJ-_Aw9Pq21/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "(DC motor)",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1JrRa_Xrc5AsqD8dGiLPyFEbiL4jOur2J/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": [
+    {
+      "label": "Sem 1",
+      "type": "file",
+      "url": "https://drive.google.com/file/d/1JgJ7WmY7dwrQrasQGpXigrcN8LWdn0aJ/view?usp=drivesdk",
+      "lastUpdated": "2026-06-30"
+    },
+    {
+      "label": "Sem 2",
+      "type": "file",
+      "url": "https://drive.google.com/file/d/1JotJm2fhRlsGT3s0wWZrjBaLOZHz29jH/view?usp=drivesdk",
+      "lastUpdated": "2026-06-30"
+    }
+  ]
+}

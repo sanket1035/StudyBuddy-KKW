@@ -1,0 +1,88 @@
+{
+  "id": "applied-physics",
+  "name": "Applied Physics",
+  "year": "first-year",
+  "icon": "atom",
+  "lastUpdated": "2026-06-30",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Unit 1",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1NB2jWOd8vH91JIDrLW7_8aktLSOjYoVM/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Unit 2",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1NJeAJT0p832oMXWmqyDJbIK85dsA3zAc/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "Q&A (superconductivity)",
+          "type": "question-bank",
+          "url": "https://drive.google.com/file/d/1ORE16GTZ0r3svrBiosp8VIFVhCpAWIPc/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "Q&A (semiconductor)",
+          "type": "question-bank",
+          "url": "https://drive.google.com/file/d/1OKrr0e-wrjlaSAxdTJxoERDhN26CLyVU/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Unit 3",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1NKjVrZc-GQz2Be7FahrNt1ZfElJEYfOU/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Unit 4",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1Nc-DGXQkIxbkA_cnns0Gztg9pnBOzjpr/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Unit 5",
+      "resources": [
+        {
+          "label": "Notes",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1PcEVYacvjJptrNRGSjVzlfaWdAY66pe9/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        },
+        {
+          "label": "handwritten",
+          "type": "file",
+          "url": "https://drive.google.com/file/d/1NgFc6S9V6moDtJ6eDgCxEeRXJV-9q32Z/view?usp=drivesdk",
+          "lastUpdated": "2026-06-30"
+        }
+      ]
+    }
+  ],
+  "bonus": []
+}
