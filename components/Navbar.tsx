@@ -13,6 +13,7 @@ import {
   MessageSquare
 } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
+import indexData from "@/content/index.json";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -23,10 +24,40 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
-  const navLinks = [
+  const yearLabelMap: Record<string, string> = {
+    "first-year": "First Year",
+    "second-year": "Second Year",
+    "third-year": "Third Year",
+    "fourth-year": "Fourth Year",
+  };
+
+  const shortYearLabelMap: Record<string, string> = {
+    "first-year": "1st Year",
+    "second-year": "2nd Year",
+    "third-year": "3rd Year",
+    "fourth-year": "4th Year",
+  };
+
+  const yearKeys = Object.keys(indexData);
+
+  const dynamicYearNavLinks = yearKeys.map((yearKey) => ({
+    name: yearLabelMap[yearKey] || yearKey.replace("-", " "),
+    shortName: shortYearLabelMap[yearKey] || yearKey.replace("-", " "),
+    href: `/${yearKey}`,
+    icon: GraduationCap,
+  }));
+
+  interface NavItem {
+    name: string;
+    shortName?: string;
+    href: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    icon: React.ComponentType<any>;
+  }
+
+  const navLinks: NavItem[] = [
     { name: "Home", href: "/", icon: Home },
-    { name: "First Year", href: "/first-year", icon: GraduationCap },
-    { name: "Second Year", href: "/second-year", icon: GraduationCap },
+    ...dynamicYearNavLinks,
     { name: "About", href: "/about", icon: Info },
     { name: "Contact", href: "/contact", icon: MessageSquare },
     { name: "Contribute", href: "/contribute", icon: GithubIcon },
@@ -97,71 +128,26 @@ export default function Navbar() {
 
       {/* Bottom Tab Bar for Mobile Only */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest dark:bg-bg-dark border-t border-border-light dark:border-border-dark shadow-lg z-50 transition-colors">
-        <div className="flex justify-around items-center h-16 max-w-md mx-auto">
-          {/* Home Tab */}
-          <Link
-            href="/"
-            className={`flex flex-col items-center justify-center w-14 h-14 rounded-lg transition-colors ${
-              pathname === "/" 
-                ? "text-primary dark:text-primary-fixed-dim" 
-                : "text-text-secondary-light dark:text-text-secondary-dark"
-            }`}
-          >
-            <Home size={20} />
-            <span className="font-inter text-[10px] mt-1">Home</span>
-          </Link>
-
-          {/* First Year Tab */}
-          <Link
-            href="/first-year"
-            className={`flex flex-col items-center justify-center w-14 h-14 rounded-lg transition-colors ${
-              pathname === "/first-year" 
-                ? "text-primary dark:text-primary-fixed-dim" 
-                : "text-text-secondary-light dark:text-text-secondary-dark"
-            }`}
-          >
-            <GraduationCap size={20} />
-            <span className="font-inter text-[10px] mt-1">1st Year</span>
-          </Link>
-
-          {/* Second Year Tab */}
-          <Link
-            href="/second-year"
-            className={`flex flex-col items-center justify-center w-14 h-14 rounded-lg transition-colors ${
-              pathname === "/second-year" 
-                ? "text-primary dark:text-primary-fixed-dim" 
-                : "text-text-secondary-light dark:text-text-secondary-dark"
-            }`}
-          >
-            <GraduationCap size={20} />
-            <span className="font-inter text-[10px] mt-1">2nd Year</span>
-          </Link>
-
-          {/* About Tab */}
-          <Link
-            href="/about"
-            className={`flex flex-col items-center justify-center w-14 h-14 rounded-lg transition-colors ${
-              pathname === "/about" 
-                ? "text-primary dark:text-primary-fixed-dim" 
-                : "text-text-secondary-light dark:text-text-secondary-dark"
-            }`}
-          >
-            <Info size={20} />
-            <span className="font-inter text-[10px] mt-1">About</span>
-          </Link>
-
-          {/* Contact Tab */}
-          <Link
-            href="/contact"
-            className={`flex flex-col items-center justify-center w-14 h-14 rounded-lg transition-colors ${
-              pathname === "/contact" 
-                ? "text-primary dark:text-primary-fixed-dim" 
-                : "text-text-secondary-light dark:text-text-secondary-dark"
-            }`}
-          >
-            <MessageSquare size={20} />
-            <span className="font-inter text-[10px] mt-1">Contact</span>
-          </Link>
+        <div className="flex justify-around items-center h-16 max-w-md mx-auto overflow-x-auto">
+          {navLinks.map((link) => {
+            const Icon = link.icon;
+            const isActive = pathname === link.href;
+            const displayName = link.shortName || link.name;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`flex flex-col items-center justify-center min-w-[3.5rem] h-14 rounded-lg transition-colors px-1 ${
+                  isActive 
+                    ? "text-primary dark:text-primary-fixed-dim" 
+                    : "text-text-secondary-light dark:text-text-secondary-dark"
+                }`}
+              >
+                <Icon size={20} />
+                <span className="font-inter text-[10px] mt-1 whitespace-nowrap">{displayName}</span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>
