@@ -1,11 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
-import fs from "fs";
-import path from "path";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SubjectCard from "@/components/SubjectCard";
+import indexData from "@/content/index.json";
 
 interface SubjectIndexItem {
   id: string;
@@ -21,35 +20,37 @@ interface PageProps {
   };
 }
 
+const yearTitles: Record<string, string> = {
+  "first-year": "First Year Subjects",
+  "second-year": "Second Year Subjects",
+  "third-year": "Third Year Subjects",
+  "fourth-year": "Fourth Year Subjects",
+};
+
+const yearDescriptions: Record<string, string> = {
+  "first-year": "Common engineering foundation courses for Semester I & II",
+  "second-year": "Departmental core subjects for Semester III & IV (AI&DS / CS)",
+  "third-year": "Advanced specialization and elective courses for Semester V & VI",
+  "fourth-year": "Capstone projects, industrial training, and electives for Semester VII & VIII",
+};
+
 export async function generateStaticParams() {
-  return [
-    { year: "first-year" },
-    { year: "second-year" }
-  ];
+  return Object.keys(indexData).map((year) => ({ year }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { year } = params;
+  const validYears = Object.keys(indexData);
 
-  if (year !== "first-year" && year !== "second-year") {
+  if (!validYears.includes(year)) {
     return {};
   }
 
-  const yearLabel = year === "first-year" ? "First Year" : "Second Year";
-  const indexPath = path.join(process.cwd(), "content", "index.json");
-  let subjects: SubjectIndexItem[] = [];
-
-  try {
-    const fileContent = fs.readFileSync(indexPath, "utf-8");
-    const data = JSON.parse(fileContent);
-    subjects = data[year] || [];
-  } catch (error) {
-    console.error("Failed to load subject index for metadata:", error);
-  }
-
+  const yearLabel = yearTitles[year] || `${year.replace("-", " ")} Subjects`;
+  const subjects = (indexData as Record<string, SubjectIndexItem[]>)[year] || [];
   const first3 = subjects.slice(0, 3).map((s) => s.name).join(", ");
-  const title = `${yearLabel} Subjects | Study Buddy KKW`;
-  const description = `${subjects.length} subjects including ${first3}... Find notes, PYQs, and syllabus for KKW engineering students.`;
+  const title = `${yearLabel} | Study Buddy KKW`;
+  const description = `${subjects.length} subjects${first3 ? ` including ${first3}...` : ""}. Find notes, PYQs, and syllabus for KKW engineering students.`;
 
   return {
     title,
@@ -64,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: "/og-preview.png",
           width: 1200,
           height: 630,
-          alt: `${yearLabel} Subjects - Study Buddy KKW`,
+          alt: `${yearLabel} - Study Buddy KKW`,
         },
       ],
     },
@@ -79,28 +80,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function YearPage({ params }: PageProps) {
   const { year } = params;
+  const validYears = Object.keys(indexData);
 
-  if (year !== "first-year" && year !== "second-year") {
+  if (!validYears.includes(year)) {
     notFound();
   }
 
-  // Load subject index
-  const indexPath = path.join(process.cwd(), "content", "index.json");
-  let subjects: SubjectIndexItem[] = [];
-
-  try {
-    const fileContent = fs.readFileSync(indexPath, "utf-8");
-    const data = JSON.parse(fileContent);
-    subjects = data[year] || [];
-  } catch (error) {
-    console.error("Failed to load subject index:", error);
-    notFound();
-  }
-
-  const title = year === "first-year" ? "First Year Subjects" : "Second Year Subjects";
-  const desc = year === "first-year" 
-    ? "Common engineering foundation courses for Semester I & II" 
-    : "Departmental core subjects for Semester III & IV (AI&DS / CS)";
+  const subjects = (indexData as Record<string, SubjectIndexItem[]>)[year] || [];
+  const title = yearTitles[year] || `${year.replace("-", " ")} Subjects`;
+  const desc = yearDescriptions[year] || `Curriculum materials for ${year.replace("-", " ")}`;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -110,7 +98,7 @@ export default async function YearPage({ params }: PageProps) {
         {/* Page Header */}
         <div className="mb-10 max-w-2xl">
           <div className="text-body-sm font-semibold tracking-wider uppercase text-primary dark:text-primary-fixed-dim mb-2">
-            {year === "first-year" ? "1st Year Curriculum" : "2nd Year Curriculum"}
+            {year.replace("-", " ")} Curriculum
           </div>
           <h1 className="font-sora font-bold text-headline-lg md:text-headline-xl text-on-surface dark:text-text-primary-dark mb-3">
             {title}

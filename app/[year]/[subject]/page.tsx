@@ -8,6 +8,7 @@ import { ChevronLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import UnitList from "@/components/UnitList";
+import indexData from "@/content/index.json";
 
 interface Resource {
   label: string;
@@ -41,7 +42,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const paths: { year: string; subject: string }[] = [];
-  const years = ["first-year", "second-year"];
+  const years = Object.keys(indexData);
 
   for (const year of years) {
     const dirPath = path.join(process.cwd(), "content", year);
@@ -63,8 +64,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { year, subject } = params;
+  const validYears = Object.keys(indexData);
 
-  if (year !== "first-year" && year !== "second-year") {
+  if (!validYears.includes(year)) {
     return {};
   }
 
@@ -84,7 +86,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {};
   }
 
-  const yearLabel = year === "first-year" ? "1st Year" : "2nd Year";
+  const yearLabel = year.replace("-", " ");
   const title = `${subjectData.name} (${yearLabel}) | Study Buddy KKW`;
   const description = `Access notes, PYQs, question banks, and study resources for ${subjectData.name} at K.K. Wagh.`;
 
@@ -116,8 +118,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function SubjectPage({ params }: PageProps) {
   const { year, subject } = params;
+  const validYears = Object.keys(indexData);
 
-  if (year !== "first-year" && year !== "second-year") {
+  if (!validYears.includes(year)) {
     notFound();
   }
 
@@ -148,14 +151,14 @@ export default async function SubjectPage({ params }: PageProps) {
           className="inline-flex items-center gap-1 text-body-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary-fixed-dim mb-6 transition-colors group"
         >
           <ChevronLeft size={16} className="group-hover:-translate-x-[2px] transition-transform" />
-          Back to {year === "first-year" ? "First Year" : "Second Year"}
+          Back to {year.replace("-", " ")}
         </Link>
 
         {/* Subject Header */}
         <div className="mb-10 pb-6 border-b border-border-light dark:border-border-dark flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
           <div>
-            <span className="font-mono text-label-mono text-primary dark:text-primary-fixed-dim bg-primary-fixed dark:bg-inverse-surface px-2.5 py-1 rounded-md">
-              {year === "first-year" ? "1st Year Course" : "2nd Year Course"}
+            <span className="font-mono text-label-mono text-primary dark:text-primary-fixed-dim bg-primary-fixed dark:bg-inverse-surface px-2.5 py-1 rounded-md uppercase">
+              {year.replace("-", " ")} Course
             </span>
             <h1 className="font-sora font-bold text-headline-lg md:text-headline-xl text-on-surface dark:text-text-primary-dark mt-3 mb-2">
               {subjectData.name}

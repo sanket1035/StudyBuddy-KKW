@@ -127,77 +127,76 @@ export default function Home() {
 
         {/* Year Selector Grid */}
         <section className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-gutter mb-12">
-          {/* First Year Card */}
-          <Link
-            href="/first-year"
-            className="group bg-surface-container-lowest dark:bg-bg-dark rounded-xl p-8 border border-border-light dark:border-border-dark shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[220px]"
-          >
-            <div>
-              <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-lg bg-surface-container dark:bg-inverse-surface flex items-center justify-center text-primary dark:text-primary-fixed-dim transition-colors">
-                  <GraduationCap size={24} />
-                </div>
-                <span className="font-mono text-label-mono text-text-secondary-light dark:text-text-secondary-dark bg-surface-container dark:bg-inverse-surface px-2.5 py-1 rounded-full border border-border-light dark:border-border-dark">
-                  {indexData["first-year"].length} Subjects
-                </span>
-              </div>
-              
-              <h2 className="font-sora font-semibold text-headline-md text-on-surface dark:text-text-primary-dark mb-2 group-hover:text-primary dark:group-hover:text-primary-fixed-dim transition-colors">
-                First Year
-              </h2>
-              
-              <p className="font-inter text-body-md text-text-secondary-light dark:text-text-secondary-dark mb-6">
-                Common engineering foundation courses for Semester I & II.
-              </p>
-            </div>
+          {Object.keys(indexData).map((yearKey) => {
+            const subjects = (indexData as Record<string, { id: string; name: string }[]>)[yearKey] || [];
             
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {["M-I", "M-II", "Physics", "Chemistry", "C Programming", "Mechanics"].map((tag) => (
-                <span 
-                  key={tag}
-                  className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-surface-container-low dark:bg-inverse-surface border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark group-hover:border-primary-fixed-dim transition-colors"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </Link>
+            const yearDetails: Record<string, { title: string; desc: string; tags: string[] }> = {
+              "first-year": {
+                title: "First Year",
+                desc: "Common engineering foundation courses for Semester I & II.",
+                tags: ["M-I", "M-II", "Physics", "Chemistry", "C Programming", "Mechanics"],
+              },
+              "second-year": {
+                title: "Second Year",
+                desc: "Core departmental subjects for Semesters III & IV (AI&DS / CS).",
+                tags: ["Data Structures", "DELD", "Operating Systems", "DBMS", "Discrete Math", "Maths 3"],
+              },
+              "third-year": {
+                title: "Third Year",
+                desc: "Advanced specialization and elective courses for Semesters V & VI.",
+                tags: ["Computer Networks", "TOC", "Web Tech", "AI & ML", "Cloud Computing"],
+              },
+              "fourth-year": {
+                title: "Fourth Year",
+                desc: "Capstone projects, industrial training, and electives for Semesters VII & VIII.",
+                tags: ["Major Project", "Cyber Security", "DevOps", "Deep Learning", "Seminar"],
+              },
+            };
 
-          {/* Second Year Card */}
-          <Link
-            href="/second-year"
-            className="group bg-surface-container-lowest dark:bg-bg-dark rounded-xl p-8 border border-border-light dark:border-border-dark shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[220px]"
-          >
-            <div>
-              <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-lg bg-surface-container dark:bg-inverse-surface flex items-center justify-center text-primary dark:text-primary-fixed-dim transition-colors">
-                  <GraduationCap size={24} />
+            const details = yearDetails[yearKey] || {
+              title: yearKey.replace("-", " "),
+              desc: `Curriculum materials for ${yearKey.replace("-", " ")}.`,
+              tags: ["Notes", "PYQs", "Syllabus"],
+            };
+
+            return (
+              <Link
+                key={yearKey}
+                href={`/${yearKey}`}
+                className="group bg-surface-container-lowest dark:bg-bg-dark rounded-xl p-8 border border-border-light dark:border-border-dark shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[220px]"
+              >
+                <div>
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-surface-container dark:bg-inverse-surface flex items-center justify-center text-primary dark:text-primary-fixed-dim transition-colors">
+                      <GraduationCap size={24} />
+                    </div>
+                    <span className="font-mono text-label-mono text-text-secondary-light dark:text-text-secondary-dark bg-surface-container dark:bg-inverse-surface px-2.5 py-1 rounded-full border border-border-light dark:border-border-dark">
+                      {subjects.length} Subjects
+                    </span>
+                  </div>
+                  
+                  <h2 className="font-sora font-semibold text-headline-md text-on-surface dark:text-text-primary-dark mb-2 group-hover:text-primary dark:group-hover:text-primary-fixed-dim transition-colors">
+                    {details.title}
+                  </h2>
+                  
+                  <p className="font-inter text-body-md text-text-secondary-light dark:text-text-secondary-dark mb-6">
+                    {details.desc}
+                  </p>
                 </div>
-                <span className="font-mono text-label-mono text-text-secondary-light dark:text-text-secondary-dark bg-surface-container dark:bg-inverse-surface px-2.5 py-1 rounded-full border border-border-light dark:border-border-dark">
-                  {indexData["second-year"].length} Subjects
-                </span>
-              </div>
-              
-              <h2 className="font-sora font-semibold text-headline-md text-on-surface dark:text-text-primary-dark mb-2 group-hover:text-primary dark:group-hover:text-primary-fixed-dim transition-colors">
-                Second Year
-              </h2>
-              
-              <p className="font-inter text-body-md text-text-secondary-light dark:text-text-secondary-dark mb-6">
-                Core departmental subjects for Semesters III & IV (AI&DS / CS).
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {["Data Structures", "DELD", "Operating Systems", "DBMS", "Discrete Math", "Maths 3"].map((tag) => (
-                <span 
-                  key={tag}
-                  className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-surface-container-low dark:bg-inverse-surface border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark group-hover:border-primary-fixed-dim transition-colors"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </Link>
+                
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {details.tags.map((tag) => (
+                    <span 
+                      key={tag}
+                      className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-surface-container-low dark:bg-inverse-surface border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark group-hover:border-primary-fixed-dim transition-colors"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            );
+          })}
         </section>
       </main>
 
