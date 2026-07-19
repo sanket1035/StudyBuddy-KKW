@@ -39,7 +39,7 @@ export default function ContactPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               {/* Left Details */}
-              <div className="lg:col-span-8 space-y-6">
+              <div className="lg:col-span-7 space-y-6">
                 <div>
                   <div className="inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-widest text-primary dark:text-primary-fixed-dim mb-2">
                     <Code2 size={16} /> Lead Website Innovator & Creator
@@ -139,14 +139,14 @@ export default function ContactPage() {
               </div>
 
               {/* Right Avatar / Innovator Image Card */}
-              <div className="lg:col-span-4 flex items-center justify-center">
-                <div className="p-1 rounded-3xl bg-gradient-to-tr from-primary via-blue-500 to-amber-400 shadow-xl overflow-hidden shrink-0">
+              <div className="lg:col-span-5 flex items-center justify-center">
+                <div className="p-1 rounded-3xl bg-gradient-to-tr from-primary via-blue-500 to-amber-400 shadow-xl overflow-hidden shrink-0 w-full max-w-[320px]">
                   <Image
                     src="/sanket-chaudhari.jpeg"
                     alt="Sanket Chaudhari"
-                    width={260}
-                    height={320}
-                    className="w-full max-w-[260px] h-[320px] object-cover rounded-[22px] hover:scale-[1.02] transition-transform duration-300"
+                    width={600}
+                    height={400}
+                    className="w-full h-[240px] sm:h-[260px] object-cover object-top rounded-[22px] hover:scale-[1.02] transition-transform duration-300"
                     priority
                   />
                 </div>
