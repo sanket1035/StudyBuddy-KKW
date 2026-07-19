@@ -103,10 +103,35 @@ Rules:
 5. Return ONLY the JSON object. Do not include markdown codeblocks, explanations, or commentary.`;
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const candidateModels = [
+      "gemini-2.0-flash",
+      "gemini-1.5-flash-latest",
+      "gemini-1.5-flash",
+      "gemini-1.5-pro",
+      "gemini-pro",
+    ];
 
-    const result = await model.generateContent(prompt);
-    let text = result.response.text().trim();
+    let text: string | null = null;
+    let lastError: unknown = null;
+
+    for (const modelName of candidateModels) {
+      try {
+        const model = genAI.getGenerativeModel({ model: modelName });
+        const result = await model.generateContent(prompt);
+        const candidateText = result.response.text().trim();
+        if (candidateText) {
+          text = candidateText;
+          break;
+        }
+      } catch (err) {
+        lastError = err;
+        console.warn(`Model ${modelName} failed, trying next candidate...`, err);
+      }
+    }
+
+    if (!text) {
+      throw lastError || new Error("All Gemini model candidates failed.");
+    }
 
     // Strip markdown JSON block if present
     if (text.startsWith("```")) {
