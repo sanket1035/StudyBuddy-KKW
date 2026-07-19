@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import UnitList from "@/components/UnitList";
 import SubjectViewTracker from "@/components/SubjectViewTracker";
+import StudyAssistantButton from "@/components/StudyAssistantButton";
 import indexData from "@/content/index.json";
 
 interface Resource {
@@ -169,15 +170,22 @@ export default async function SubjectPage({ params }: PageProps) {
             </p>
           </div>
 
-          <div className="font-inter text-body-sm text-text-secondary-light dark:text-text-secondary-dark text-right">
-            Last updated:{" "}
-            <span className="font-medium text-on-surface dark:text-text-primary-dark">
-              {new Date(subjectData.lastUpdated).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric"
-              })}
-            </span>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <StudyAssistantButton
+              subjectId={subjectData.id}
+              subjectName={subjectData.name}
+              year={year}
+            />
+            <div className="font-inter text-body-sm text-text-secondary-light dark:text-text-secondary-dark text-left sm:text-right">
+              Last updated:{" "}
+              <span className="font-medium text-on-surface dark:text-text-primary-dark">
+                {new Date(subjectData.lastUpdated).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric"
+                })}
+              </span>
+            </div>
           </div>
         </div>
 
